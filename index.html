@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+   
+
+</head>
+<body>
+    <div class = "container">
+        <div class = "row">
+            <div class = "col-md-4"> </div>
+            <div class = "col-md-4">
+                <div class="dclock" id = "clock"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function displayTime(){
+        const currentTime = new Date();
+        console.log(currentTime);
+        let hours = currentTime.getHours();
+        console.log(hours);
+        let minutes = currentTime.getMinutes();
+        console.log(minutes);
+        let seconds = currentTime.getSeconds()
+        console.log(seconds);
+        clock.innerHTML = `${hours} : ${minutes} : ${seconds} ${hours<12? 'AM':'PM'}`
+    }
+    setInterval(()=>{
+        displayTime()
+    },1000)
+
+</script>
+</html>
